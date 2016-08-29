@@ -3,7 +3,7 @@
 ## Usage
 ```
 docker build -t minecraft .
-docker run -it -p 25565:25565 --restart always --name minecraft minecraft
+docker run -it -p 25565:25565 -v $(pwd)/world:/minecraft/world --name minecraft minecraft
 ```
 
 Monitor server with

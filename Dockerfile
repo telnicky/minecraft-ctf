@@ -11,7 +11,7 @@ RUN java -jar BuildTools.jar --rev 1.9
 RUN echo "eula=true" > eula.txt
 
 COPY server.properties /minecraft
-COPY ops.txt /minecraft
+COPY ops.json /minecraft
 COPY plugins /minecraft/plugins
 
 CMD ["java", "-Xms512M", "-Xmx1G", "-XX:+UseConcMarkSweepGC", "-jar", "spigot-1.9.jar"]
